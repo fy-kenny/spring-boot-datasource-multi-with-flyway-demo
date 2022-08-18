@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    ds1:
+      jdbcUrl: jdbc:mariadb://localhost:3306/db1?createDatabaseIfNotExist=true&useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Shanghai&failOverReadOnly=false
+      username: root
+      password: 654321
+      driver-class-name: org.mariadb.jdbc.Driver
+    ds2:
+      jdbcUrl: jdbc:mariadb://localhost:3306/db2?createDatabaseIfNotExist=true&useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Shanghai&failOverReadOnly=false
+      username: root
+      password: 654321
+      driver-class-name: org.mariadb.jdbc.Driver
+    ds3:
+      jdbcUrl: jdbc:mariadb://localhost:3306/db3?createDatabaseIfNotExist=true&useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Shanghai&failOverReadOnly=false
+      username: root
+      password: 654321
+      driver-class-name: org.mariadb.jdbc.Driver
+  flyway:
+    enabled: false
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/**/*Mapper.xml
+
+
