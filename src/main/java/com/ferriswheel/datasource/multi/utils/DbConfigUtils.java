@@ -16,7 +16,6 @@ public interface DbConfigUtils {
     static SqlSessionFactory getSqlSessionFactory(DataSource ds1DataSource, MybatisProperties mybatisProperties) throws Exception {
         org.apache.ibatis.session.Configuration configuration = new  org.apache.ibatis.session.Configuration();
         BeanUtils.copyProperties(mybatisProperties.getConfiguration(), configuration);
-        configuration.setEnvironment(null);
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(ds1DataSource);
         sqlSessionFactoryBean.setMapperLocations(mybatisProperties.resolveMapperLocations());
