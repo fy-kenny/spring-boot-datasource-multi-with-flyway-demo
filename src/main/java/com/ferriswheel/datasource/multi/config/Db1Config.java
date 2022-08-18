@@ -41,7 +41,6 @@ public class Db1Config {
         sqlSessionFactoryBean.setDataSource(ds1DataSource);
         sqlSessionFactoryBean.setMapperLocations(mybatisProperties.resolveMapperLocations());
         sqlSessionFactoryBean.setConfiguration(configuration);
-//        sqlSessionFactoryBean.getObject().getConfiguration().setMapUnderscoreToCamelCase(true);
 
         return sqlSessionFactoryBean.getObject();
     }

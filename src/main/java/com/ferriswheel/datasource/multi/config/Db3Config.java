@@ -28,15 +28,6 @@ public class Db3Config {
         return DataSourceBuilder.create().build();
     }
 
-
-//    @Bean
-//    @ConfigurationProperties(prefix = "mybatis.configuration")
-//    public org.apache.ibatis.session.Configuration configuration() {
-//        org.apache.ibatis.session.Configuration configuration = new org.apache.ibatis.session.Configuration();
-//        configuration.setMapUnderscoreToCamelCase(true);
-//        return configuration;
-//    }
-
     @Bean
     public SqlSessionFactory ds3SqlSessionFactory(@Qualifier("ds3DataSource") DataSource ds3DataSource,
                                                   MybatisProperties mybatisProperties) throws Exception {
@@ -47,7 +38,6 @@ public class Db3Config {
         sqlSessionFactoryBean.setDataSource(ds3DataSource);
         sqlSessionFactoryBean.setMapperLocations(mybatisProperties.resolveMapperLocations());
         sqlSessionFactoryBean.setConfiguration(configuration);
-//        sqlSessionFactoryBean.getObject().getConfiguration().setMapUnderscoreToCamelCase(true);
 
         return sqlSessionFactoryBean.getObject();
     }

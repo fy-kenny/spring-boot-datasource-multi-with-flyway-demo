@@ -2,16 +2,12 @@ package com.ferriswheel.datasource.multi.config;
 
 import com.zaxxer.hikari.HikariDataSource;
 import org.flywaydb.core.Flyway;
-import org.flywaydb.core.api.Location;
 import org.flywaydb.core.api.configuration.ClassicConfiguration;
 import org.springframework.context.annotation.Configuration;
 
 import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
-import javax.tools.DocumentationTool;
 import java.util.List;
-import java.util.Optional;
-import java.util.function.Consumer;
 
 /**
  * @author Kenny Fang

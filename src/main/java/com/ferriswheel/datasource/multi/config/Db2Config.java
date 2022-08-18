@@ -28,15 +28,6 @@ public class Db2Config {
         return DataSourceBuilder.create().build();
     }
 
-
-//    @Bean
-//    @ConfigurationProperties(prefix = "mybatis.configuration")
-//    public org.apache.ibatis.session.Configuration configuration() {
-//        org.apache.ibatis.session.Configuration configuration = new org.apache.ibatis.session.Configuration();
-//        configuration.setMapUnderscoreToCamelCase(true);
-//        return configuration;
-//    }
-
     @Bean
     public SqlSessionFactory ds2SqlSessionFactory(@Qualifier("ds2DataSource") DataSource ds2DataSource,
                                                   MybatisProperties mybatisProperties) throws Exception {
@@ -47,7 +38,6 @@ public class Db2Config {
         sqlSessionFactoryBean.setDataSource(ds2DataSource);
         sqlSessionFactoryBean.setMapperLocations(mybatisProperties.resolveMapperLocations());
         sqlSessionFactoryBean.setConfiguration(configuration);
-//        sqlSessionFactoryBean.getObject().getConfiguration().setMapUnderscoreToCamelCase(true);
 
         return sqlSessionFactoryBean.getObject();
     }
