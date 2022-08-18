@@ -2,6 +2,7 @@
 ## This is a demo project for
 - Spring boot multiple database
 - flyway multiple database version control
+- reuse mybatis configurations
 
 Please feel free to try.
 
